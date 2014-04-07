@@ -1,0 +1,182 @@
+html{
+	font-family:	Segoe WP light;
+}
+body{
+	margin:	0;
+}
+#selector{
+	position:	fixed;
+	background-color:	#1C1C1C;
+	height:	100%;
+	width:	300px;
+	border-right-color:	#424242;
+	border-right-width:	15px;
+	border-right-style:	solid;
+	z-index:	1;
+	color:	#33CCFF;
+}
+.homelogo{
+	position:	absolute;
+	bottom: 50px;
+	left:	30px;
+	height:	50px;
+	width:	50px;
+}
+.homeword{
+	position:	absolute;
+	bottom:	45px;
+	left:	85px;
+	color:	#33CCFF;
+}
+.homeword:hover{
+	color: White;
+}
+.docm{
+	position:	absolute;
+	right:	20px;
+	top:	25px;
+	font-size:	30px;
+}
+.docm1{
+	right:	20px;
+	color:	White;
+	position:	absolute;
+	top:	90px;
+	font-size:	15px;
+}
+.docm1:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+.docm2{
+	right:	20px;
+	color:	White;
+	position:	absolute;
+	top:	120px;
+	font-size:	15px;
+}
+.docm2:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+.docm3{
+	right:	20px;
+	color:	White;
+	position:	absolute;
+	top:	150px;
+	font-size:	15px;
+}
+.docm3:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+.docm4{
+	right:	20px;
+	color:	White;
+	position:	absolute;
+	top:	180px;
+	font-size:	15px;
+}
+.docm4:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+.docm5{
+	right:	20px;
+	color:	White;
+	position:	absolute;
+	top:	210px;
+	font-size:	15px;
+}
+.docm5:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+.docm6{
+	right:	20px;
+	color:	White;
+	position:	absolute;
+	top:	240px;
+	font-size:	15px;
+}
+.docm6:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+.docm7{
+	right:	20px;
+	color:	White;
+	position:	absolute;
+	top:	270px;
+	font-size:	15px;
+}
+.docm7:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+.docm8{
+	right:	20px;
+	color:	White;
+	position:	absolute;
+	top:	300px;
+	font-size:	15px;
+}
+.docm8:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+.docm9{
+	right:	20px;
+	color:	White;
+	position:	absolute;
+	top:	330px;
+	font-size:	15px;
+}
+.docm9:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+.docm10{
+	right:	20px;
+	color:	White;
+	position:	absolute;
+	top:	360px;
+	font-size:	15px;
+}
+.docm10:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+#right{
+	position:	absolute;
+	right:	0px;
+	height:	100%;
+	width:	70%;
+	text-align:	left;
+	padding-right:	20px;
+}
+#PC{
+	position:	relative;
+	right:	-100px;
+}
+.block{
+	position:	relative;
+	top:	-30px;
+	right:	70px;
+	
+}
+.blockdiagram{
+	position: relative;
+	top:	-70px;
+	right:	-280px;
+}
+.sapopcodetable{
+	position: relative;
+	top:	-30px;
+}
+.instset{
+	position: relative;
+	top: 35px;
+	left:	100px;
+	font-size:	35px;
+}
