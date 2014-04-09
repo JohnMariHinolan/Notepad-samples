@@ -3,7 +3,7 @@
   <server hostname="localhost" id="HTTP Preview at localhost" name="HTTP Preview at localhost" runtime-id="HTTP Preview" server-type="org.eclipse.wst.server.preview.server" server-type-id="org.eclipse.wst.server.preview.server" start-timeout="240" stop-timeout="240" timestamp="1">
     <list key="modules" value0="WebApp::org.eclipse.wst.web.internal.deployables.static:WebApp::wst.web::1.0"/>
   </server>
-  <server hostname="localhost" id="HTTP Server at localhost" isPublishing="true" name="HTTP Server at localhost" port="80" runtime-id="HTTP Server" server-type="org.eclipse.wst.server.http.server" server-type-id="org.eclipse.wst.server.http.server" start-timeout="240" stop-timeout="240" timestamp="1" urlPrefix="">
+  <server hostname="localhost" id="HTTP Server at localhost" isPublishing="true" name="HTTP Server at localhost" port="85" runtime-id="HTTP Server" server-type="org.eclipse.wst.server.http.server" server-type-id="org.eclipse.wst.server.http.server" start-timeout="240" stop-timeout="240" timestamp="1" urlPrefix="">
     <list key="modules" value0="WebApp::org.eclipse.wst.web.internal.deployables.static:WebApp::wst.web::1.0"/>
   </server>
 </servers>
