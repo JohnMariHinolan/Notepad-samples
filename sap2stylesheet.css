@@ -1,0 +1,239 @@
+html{
+	background-color:	#BDBDBD;	
+	font-family:	Segoe WP light;
+}
+body{
+	margin:	0;
+}
+
+img{
+	position:	absolute;
+	left:	150px;
+	height:	79px;
+	width:	72px;
+	top:	18px;
+}
+img:hover{
+	cursor:	pointer;
+}
+.title{
+	color:	#33CCFF;
+	position:	absolute;
+	left:	250px;
+}
+.home:hover{
+	color:	#01DFD7;
+	cursor:	pointer;
+}
+.docu:hover{
+	color:	#01DFD7;
+	cursor:	pointer;
+}
+.best:hover{
+	color:	#01DFD7;
+	cursor:	pointer;
+}
+.meet:hover{
+	color:	#01DFD7;
+	cursor:	pointer;
+}
+.how:hover{
+	color:	#01DFD7;
+	cursor:	pointer;
+}
+.home{
+	color:	#E6E6E6;
+	position:	absolute;
+	top:	80px;
+	left:	260px;
+	font-size:	15px;
+}
+.meet{
+	color:	#E6E6E6;
+	position:	absolute;
+	top:	80px;
+	left:	350px;
+	font-size:	15px;
+}
+.how{
+	color:	#E6E6E6;
+	position:	absolute;
+	top:	80px;
+	left:	480px;
+	font-size:	15px;
+}
+.docu{
+	color:	#E6E6E6;
+	position:	absolute;
+	top:	80px;
+	left:	590px;
+	font-size:	15px;
+}
+.best{
+	color:	#E6E6E6;
+	position:	absolute;
+	top:	80px;
+	right:	55px;
+	font-size:	15px;
+}
+
+#header{
+	position:	fixed;
+	background-color:	#1C1C1C;
+	width:	100%;
+	z-index:	1;
+	height:		120px;
+	border-bottom-color:	#424242;
+	border-bottom-width:	15px;
+	border-bottom-style:	solid;
+	
+}
+#yellow{
+	position:	absolute;
+	background-color:	#FFFF00;
+	width:	100%;
+	height:		400px;
+	top:	120px;
+}
+#yellow img{
+	height:		330px;
+	width:	330px;
+	position:	absolute;
+	top:	40px;
+	left:	800px;
+}
+.sap2body{
+	font-size:	60px;
+	position:	absolute;
+	top:	32px;
+	left:	200px;
+	font-family:	Segoe UI;
+	color:	#666666;
+	letter-spacing:	0.0001px;
+}
+.emulatorprogram{
+	font-size:	50px;
+	position:	absolute;
+	top:	110px;
+	left:	215px;
+	font-family:	Segoe WP;
+	color:	#666689;
+}
+.overview{
+	font-size:	25px;
+	position:	absolute;
+	top:	200px;
+	left:	220px;
+	font-family:	Segoe WP;
+	color:	#666666;
+}
+.getmethere{
+	position:	absolute;
+	width:	160px;
+	height:	45px;
+	background-color:	#33CCFF;
+	top: 285px;
+	left: 240px;
+	font-size:	25px;
+	color:	black;
+}
+.get{
+	position:	absolute;
+	top: 	-28px;
+	left:	15px;
+}
+.getmethere:hover{
+	background-color:	#0099CC;
+	cursor:	pointer;
+	color:	#01DFD7;
+}
+#orange{
+	width:	100%;
+	background-color:	#ff6633;
+	position:	absolute;
+	height:	400px;
+	top:	520px;
+
+}
+
+.what{
+	font-size:	50px;
+	position:	absolute;
+	top:	28px;
+	left:	90px;
+	font-family:	Segoe UI;
+	color:	#333333;
+	letter-spacing:	0.0001px;
+}
+.sap2meaning{
+	font-size:	30px;
+	position:	absolute;
+	top:	110px;
+	left:	100px;
+	font-family:	Segoe WP;
+	color:	#333333;
+}
+.readmore{
+	position:	absolute;
+	width:	160px;
+	height:	45px;
+	background-color:	#33CCFF;
+	top: 260px;
+	left: 160px;
+	font-size:	25px;
+	color:	black;
+}
+.read{
+	position:	absolute;
+	top: 	-28px;
+	left:	25px;
+	
+}
+.readmore:hover{
+	background-color:	#0099CC;
+	cursor:	pointer;
+	color:	#01DFD7;
+}
+#orange img{
+	height:		330px;
+	width:	420px;
+	position:	absolute;
+	top:	40px;
+	left:	875px;
+}
+#green{
+	width: 100%;
+	background-color:	#99CC00;
+	position:	absolute;
+	height:	400px;
+	top:	920px;
+	border-bottom-width:	100px;
+	border-bottom-color:	#0099CC;
+}
+.connect{
+	font-size:	50px;
+	position:	absolute;
+	top:	55px;
+	left:	320px;
+	font-family:	Segoe UI;
+	color:	#333333;
+	letter-spacing:	0.0001px;
+}
+#green img{
+	height:		250px;
+	width:	250px;
+	position:	absolute;
+	top:	55px;
+	left:	750px;
+}
+#blackbottom{
+	position:	absolute;
+	top:	1300px;
+	height:	120px;
+	width:	100%;
+	border-style: solid;
+	background-color:	#1C1C1C;
+	border-top-width:	15px;
+	border-top-color:	#0099CC
+}
+

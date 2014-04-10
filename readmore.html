@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="readmore.css"/>
+		<title>SAP2 Architecture Simulator</title>
+	</head>
+	<body>
+		<div id ="selector">
+			<h3 class = "docm">DOCUMENTATION</h3>
+			<a href = "#discuss"><p class = "docm1">Discussion</p></a>
+			<a href = "#bidreg"><p class = "docm2">Bidirectional Architectures</p></a>
+			<a href = "#archi"><p class = "docm3">Architectures</p></a>
+			<a href = "#memref"><p class = "docm4">Memory Reference Instructions</p></a>
+			<a href = "#regin"><p class = "docm5">Register Instruction</p></a>
+			<a href = "#jump"><p class = "docm6">Jump and Call Instructions</p></a>
+			<a href = "#logic"><p class = "docm7">Logic Instructions</p></a>
+			<a href = "#other"><p class = "docm8">Other</p></a>
+			<a href = "#summary"><p class = "docm9">SAP-2 Summary</p></a>
+			<a href = "#instruct"><p class = "docm10">Instruction Sets</p></a>
+			<a href = "C:\Users\Capatan\Desktop\sap2 html\sap2.html"><h4 class = "homeword">HOME</h4></a>
+			<a href = "C:\Users\Capatan\Desktop\sap2 html\sap2.html"><img class = "homelogo" src = "C:\Users\Capatan\Desktop\sap2 html\bluelogo.png"/></a>
+		</div>
+		<div id="right">
+		<a name = "discuss"><h1 style="color:#00CCFF">DISCUSSION</h1></a>
+			<p>SAP-l is a computer because it stores a program and data before calculations begin; 
+			then it automatically carries out the program instructions without human intervention. And yet, 
+			SAP-l is a primitive computing machine. It compares to a modem computer the way a Neanderthal 
+			human would compare to a modem person. Something is missing, something found in every modem computer. 
+			SAP-2 is the next step in the evolution toward modem computers because it includes jump instructions. 
+			These new instructions force the computer to repeat or skip part of a program. As you will discover, 
+			jump instructions open up a whole new world of computing power.</p>
+			<img class = "block" src="C:\Users\Capatan\Desktop\sap2 html\block architecture.png" >
+			<p class = "blockdiagram">SAP-2 Block Architecture</p>
+		<a name = "bidreg"><h1 style="color:#00CCFF">BIDIRECTIONAL REGISTERS</h3></a>
+			<p>To reduce the wiring capacitance of SAP-2, we will run only one set of wires between each register and 
+			the bus. Figure 11-la shows the idea. The input and output pins are shorted; only one group of wires is 
+			connected to the bus. Does this shorting the input and output pins ever cause trouble? No. During a computer 
+			run, either LOAD or ENABLE may be active, but not both at the same time. An active LOAD means that a binary 
+			word flows from the bus to the register input; during a load operation, the output lines are floating. On the 
+			other hand, an active ENABLE means that a binary word flows from the register to the bus; in this case, the 
+			input lines float. The IC manufacturer can internally connect the input and output pins of a three-state register. 
+			This not only reduces the wiring capacitance; it also reduces the number of 110 pins. For instance, Fig. ll-lb 
+			has four 110 pins instead of eight. Figure II-Ie is the symbol for a three-state register with internally connected 
+			input and output pins. The doubleheaded arrow reminds us that the path is bidirectional; data can move either way.</p>
+		<a name = "archi"><h1 style="color:#00CCFF">ARCHITECTURE</h3></a>
+			<p>Figure 11-2 shows the architecture of SAP-2. All register outputs to the W bus are three state; those not 
+			connected to the bus are two-state. As before, the controller-sequencer sends control signals (not shown) to each 
+			register. These control signals load, enable, or otherwise prepare the register for the next positive clock edge. 
+			A brief description of each box is given now.</p>
+			<h4 style = "font-size:25px">Input Ports</h4>
+			<p>SAP-2 has two input ports, numbered 1 and 2. A hexadecimal keyboard encoder is connected to port 1. 
+			It allows us to enter hexadecimal instructions and data through port.</p>
+			<ol><li> Notice that the hexadecimal keyboard encoder sends a READY signal to bit 0 of port 2. This signal 
+					  indicates when the data in port 1 is valid. Also notice the SERIAL IN signal going to pin 7 of port</li>
+				<li>A later example will show you how to convert serial input data to parallel data.</li>
+			</ol>
+			<h4 style = "font-size:25px">Program Counter</h4>
+			<p>This time, the program counter has 16 bits; therefore, it can count from</p>
+			<p>PC = 0000 0000 0000 0000 to PC = 1111 1111 1111 1111</p>
+			<p>This is equivalent to 0000H to FFFFH, or decimal 0 to 65,535. A low CLR signal resets the PC before each computer 
+			run; so the data processing starts with the instruction stored in memory location OOOOH.</p>
+			<img id = "PC" src="C:\Users\Capatan\Desktop\sap2 html\bidirection.png" >
+			<p>Fig. 11.1 Bidirectional register.</p>
+			<h4 style = "font-size:25px">MAR and Memory</h4>
+			<p>During the fetch cycle, the MAR receives 16-bit addresses from the program counter. The two-state MAR output then 
+			addresses the desired memory location. The memory has a 2K ROM with addresses of 0000Hto 07FFH. This ROM contains a 
+			program called a monitor that initializes the computer on power-up, interprets the keyboard inputs, and so forth. The 
+			rest of the memory is a 62K RAM with addresses from 0800H to FFFFH.</p>
+			<h4 style = "font-size:25px">Memory Data Register</h4>
+			<p>The memory data register (MDR) is an 8-bit buffer register. Its output sets up the RAM. The memory data register 
+			receives data from the bus before a write operation, and it sends data to the bus after a read operation.</p>
+			<h4 style = "font-size:25px">Instruction Register</h4>
+			<p>Because SAP-2 has more instructions than SAP-I, we will use 8 bits for the op code rather than 4. An 8-bit op code 
+			can accommodate 256 instructions. SAP-2 has only 42 instructions, so there will be no problem coding them with 8 bits. 
+			Using an 8-bit op code also allows upward compatibility with the 8080/8085 instruction set because it is based on an 
+			8-bit op code. As mentioned earlier, all SAP instructions are identical with 8080/8085 instructions.</p>
+			<h4 style = "font-size:25px">Controller-Sequencer</h4>
+			<p>The controller-sequencer produces the control words or microinstructions that coordinate and direct the rest of 
+			the computer. Because SAP-2 has a bigger instruction set, the controller-sequencer has more hardware. Although the 
+			CON word is bigger, the idea is the same: the control word or microinstruction determines how the registers react to 
+			the next positive clock edge.</p>
+			<h4 style = "font-size:25px">Accumulator</h4>
+			<p>The two-state output of the accumulator goes to the ALU; the three-state output to the W bus. Therefore, the 8-bit 
+			word in the accumulator continuously drives the ALU, but this same word appears on the bus only when EA is active</p>
+		
+			<h4 style = "font-size:25px">ALU and Flags</h4>
+			<p>Standard ALUs are commercially available as integrated circuits. These ALUs have 4 or more control bits that determine 
+			the arithmetic or logic operation performed on words A and B. The ALU used in SAP-2 includes arithmetic and logic operations. 
+			In this book a flag is a flip-flop that keeps track of a changing condition during a computer run. The SAP-2 computer has 
+			two flags. The sign flag is set when the accumulator contents become negative during the execution of some instructions. 
+			The zero flag is set when the accumulator contents become zero.</p>
+			<h4 style = "font-size:25px">TMP, B, and C Registers</h4>
+			<p>Instead of using the B register to hold the data being added or subtracted from the accumulator, a temporary (TMP) 
+			register is used. This allows us more freedom in using the B register. Besides the TMP and B registers, SAP-2 includes a C 
+			register. This gives us more flexibility in moving data during a computer run.</p>
+			<h4 style = "font-size:25px">Output Ports</h4>
+			<p>SAP-2 has two output ports, numbered 3 and 4. The of the accumulator can be loaded into port 3, which drives a hexadecimal 
+			display. This allows us to see the processed data. The contents of the accumulator can also be sent to port 4. Notice that 
+			pin 7 of port 4 sends an ACKNOWLEDGE signal to the hexadecimal encoder. This ACKNOWLEDGE signal and the READY signal are part 
+			of a concept called handshaking, to be discussed later. Also notice the SERIAL OUT signal from pin 0 of port 4; one of the 
+			examples will show you how to convert parallel data in the accumulator into serial output data.</p>
+		<a name = "memref"><h1 style="color:#00CCFF">MEMORY-REFERENCE INSTRUCTIONS</h3></a>
+			<p>The SAP-2 fetch cycle is the same as before. <em>T1</em> is the address state, <em>T2</em> is the increment state, and <em>T3</em> is the memory state. 
+			All SAP-2 instructions therefore use the memory during the fetch cycle because a program instruction is transferred from the 
+			memory to the instruction register.</p>
+			<p>During the execution cycle, however, the memory may or may not be used; it depends on the type of instruction that has been 
+			fetched. A memory-reference instruction (MRI) is one that uses the memory during the execution cycle. The SAP-2 computer has 
+			an instruction set with 42 instructions. What follows is a description of the memory reference instructions.</p>
+			<h4 style = "font-size:25px">LDA and STA</h4>
+			<p>LDA has the same meaning as before: <em>load the accumulator</em> with the addressed memory data. The only difference is that 
+			more memory locations can be accessed in SAP-2 because the addresses are from 0000H to FFFFH. For example, LDA 2000H means 
+			to load the accumulator with the contents of memory location 2000H.</p>
+			<p>To distinguish the different parts of an instruction, the mnemonic is sometimes called the <em>op code</em> and the rest of the 
+			instruction is known as the <em>operand</em>. With LDA 2000H, LDA is the op code and 2000H is the operand. Therefore, "op code" has 
+			a double meaning in microprocessor work; it may stand for the mnemonic or for the binary code used to represent the mnemonic. 
+			The intended meaning is clear from the context. </p>
+			<p>STA is a mnemonic for <em>store the accumulator</em>. Every STA instruction needs an address. STA 7FFFH means to store the accumulator 
+			contents at memory location 7FFFH. </p>
+			<p>If A = 8AH the execution of STA 7FFFH stores 8AH at address 7FFFH.</p>
+			<h4 style = "font-size:25px">MVI</h4>
+			<p>MVI is the mnemonic for move immediate. It tells the computer to load a designated register with the byte that immediately follows the op code. 
+			For instance, MVI A,37H tells the computer to load the accumulator with 37H. After this instruction has been executed, the binary contents of the 
+			accumulator are A = 0011 0111</p>
+			<p>You can use MVI with the A, B, and C registers. The formats for these instructions are
+			MVI A,byte
+			MVI B,byte
+			MVI C,byte</p>
+			<h4 style = "font-size:25px">Op Codes</h4>
+			<p>Table 11-1 shows the op codes for the SAP-2 instruction set. These are the 8080/8085 op codes. As you can see, 3A is the op code for LDA, 
+			32 is the op code for STA, etc. Refer to this table in the remainder of this chapter.</p>
+			<h4 style = "font-size:20px">TABLE 11-1. SAP-2 OP CODES</h4>
+			<img class = "opcodetable" src="C:\Users\Capatan\Desktop\sap2 html\sapopcodes.png">
+			<a name = "regin"><h1 style="color:#00CCFF">REGISTER INSTRUCTIONS</h3></a>
+			<p>	Memory-reference instructions are relatively slow because they require more than one memory access during the instruction cycle. 
+			Furthermore ,we often want to move data directly from one register to another without having to go through the memory.  What follows 
+			are some of the SAP 2 register instructions, designed to move data from one register to another in the shortest possible time.</p>
+			<h4 style = "font-size:25px">MOV</h4>
+			<p>MOV is the mnemonic for <em>move</em>. It tells the computer to move data from one register to another.</p>
+			<h4 style = "font-size:25px">ADD/SUB</h4>
+			<p>	ADD stands for add the data in the designated register to the accumulator. Similarly, SUB means subtract the data in the designated 
+			register form the accumulator.</p>
+			<h4 style = "font-size:25px">INR/DCR </h4>
+			<p>INR is the mnemonic for <em>increment</em>; It tells the computer to increment the designated register. DCR is the mnemonic for <em>decrement</em>, 
+			and it instructs the computer to decrement the designated register.</p>
+			<a name = "jump"><h1 style="color:#00CCFF">JUMP AND CALL INSTRUCTIONS</h3></a>
+			<p>SAP-2 has four jump instructions; these can change the program sequence. In other words, instead of fetching the next instruction in the 
+			usual way, the computer may jump or branch to another part of the program.</p>
+			<h4 style = "font-size:25px">JMP</h4>
+			<p>JMP is the mnemonic for jump; it tells the computer to get the next instruction from the designated memory location. Every JMP 
+			instruction includes an address that is loaded into the program counter.</p>
+			<h4 style = "font-size:25px">JM</h4>
+			<p>SAP-2 has two flags called the sign flag and the zero flag. During the execution of some instruction, these flags will be set or 
+			reset depending on what happens to the accumulator contents. If the accumulator contents become negative the sign flag will be set ; otherwise 
+			the sign flag is cleared. JM is the mnemonic for  jump if minus; the computer will jump to a designated address if and only if the sign flag is set</p>
+			<h4 style = "font-size:25px">JZ</h4>
+			<p>JZ is the mnemonic for jump if zero; it tells the computer to jump to the designated address only if the zero flag is set.</p>
+			<h4 style = "font-size:25px">JNZ</h4>
+			<p>JNZ is the mnemonic for jump if not zero; in this case we get a jump when the zero flag is clear and no jump when it is set.</p>
+			<p>JM, JZ and JNZ are called <em>conditional jumps</em> because the program jump occurs only if certain conditions are satisfied. On the other hand JMP is 
+			unconditional; once this instruction is fetched , the execution cycle always jumps the program to the specified address.</p>
+			<h4 style = "font-size:25px">CALL </h4>
+			<p>Is the mnemonic for <em>call the subroutine</em>.  Every CALL instruction must include the starting address of the desired subroutine</p>
+			<h4 style = "font-size:25px">RET</h4>
+			<p>Stands for <em>return</em>. It is used at the end of every subroutine to tell the computer to go back to the original program.</p>
+			<a name = "logic"><h1 style="color:#00CCFF">LOGIC INSTRUCTIONS</h3></a>
+			<p>A microprocessor can do logic as well as arithmetic. They are a subset of the 8080/8085 instructions.</p>
+			<h4 style = "font-size:25px">CMA</h4>
+			<p>CMA stands for "complement the accumulator". The execution of a CMA inverts each bit in the accumulator, producing the 1's complement.</p>
+			<h4 style = "font-size:25px">ANA</h4>
+			<p>ANA means "AND the accumulator" contents with the designated register. The result is stored in the accumulator.</p>
+			<h4 style = "font-size:25px">ORA</h4>
+			<p>ORA is the mnemonic for "OR the accumulator" with designated register. The two ORA instruction in SAP-2 are ORA-B and ORA-C.</p>
+			<h4 style = "font-size:25px">XRA</h4>
+			<p>Means "XOR the accumulator" content with the designated register. The SAP-2 instruction sets contain XRA B and XRA C.</p>
+			<h4 style = "font-size:25px">ANI</h4>
+			<p>ANI means "AND immediate". It tells the computer to AND the accumulator contents with the byte that immediately follows the op code.</p>
+			<h4 style = "font-size:25px">ORI</h4>
+			<p>Is the mnemonic for "OR immediate". The accumulator contents are ORed with the byte that follows the op code.</p>
+			<h4 style = "font-size:25px">XRI</h4>
+			<p>Means "XOR immediate".</p>
+			<a name = "other"><h1 style="color:#00CCFF">OTHER INSTRUCTIONS</h3></a>
+			<h4 style = "font-size:25px">NOP</h4>
+			<p>Stands for "no operation". During the execution of NOP, all T states are do nothings. Therefore, no register changes occur 
+			during a NOP. It is used to waste time. It takes four T states to fetch and execute the NOP instruction. By repeating a NOP a number of 
+			times, we can delay the data processing, which is useful in timing operations.</p>
+			<h4 style = "font-size:25px">HLT </h4>
+			<p>HLT stands for <em>halt</em>. It ends the data processing.</p>
+			<h4 style = "font-size:25px">IN </h4>
+			<p>It is the mnemonic for <em>input</em>. It tells the computer to transfer data from the designated port to the accumulator. Since there are 
+			two input ports, you have to designate which one is being used. The format for an input operation is IN byte.</p>
+			<h4 style = "font-size:25px">OUT </h4>
+			<p>Stands for output. When this instruction is executed, the accumulator word is loaded into the designated output port. The format for an output operation is OUT byte.</p>
+			<h4 style = "font-size:25px">RAL</h4>
+			<p>RAL is the mnemonic for “rotate the accumulator left”.  This instruction will shift all bits to the left and move the MSB into the LSB position.</p>
+			<h4 style = "font-size:25px">RAR</h4>
+			<p>RAR stands for "rotate the accumulator right". This time, the bits shift to the right, the LSB going to the MSB position. </p>
+			<a name = "summary"><h1 style="color:#00CCFF">SAP-2 Summary</h3></a>
+			<h4 style = "font-size:25px">T-states</h4>
+			<p>The SAP-2 controller-sequencer is micro programmed with a variable machine cycle. This means that some instructions take longer than others 
+			to execute. Knowing the number of T states is important in timing applications.</p>
+			<h4 style = "font-size:25px">Flags</h4>
+			<p>Not all instructions affect the flags. The instructions that update the flags are ADD, ANA, ANI, DCR, INR, ORA, ORI, SUB, XRA and XRI.</p>
+			<h4 style = "font-size:25px">Conditional Jumps</h4>
+			<p>The conditional jumps taken ten T states when the jump occur but only seven T states when no jump take place. During the execution cycle the address ROM sends the 
+			computer to the starting address of a conditional-jump micro routine. The initial microinstruction looks at the flags and judges whether or not to jump. If a jump is indicated, 
+			the micro routine continues; otherwise, it is aborted and the computer begins a new fetch cycle.</p>
+			<h4 style = "font-size:25px">Addressing Modes </h4>
+			<p>The SAP-2 instructions access data in different ways. It is the operand that tells us how the data is to be accessed.</p>
+			<ol>
+				<li>Direct Addressing - the address is specified where the data is to be found.</li>
+				<li>Immediate addressing - instead of giving the address for the data, we give the data itself. </li>
+				<li>Register Addressing - the data to be loaded is stored in the CPU register rather than in the memory. 
+				Register addressing has the advantage of speed because fewer T states are needed for this type of instruction.</li>
+				<li>Implied Addressing - means that the location of the data is contained within the op code itself.</li>
+			</ol>
+			<h4 style = "font-size:25px">Bytes</h4>
+			<p>Each instruction occupies a number of bytes in the memory. SAP-2 instructions are either  1, 2, or 3 bytes long.</p>
+			<a name = "instruct"><h3 class="instset"style="color:#00CCFF">Instruction Set</h3></a>
+			<img src = "C:\Users\Capatan\Desktop\sap2 html\instruction.png">
+			
+	</div>
+	</body>
+
+
+</html>

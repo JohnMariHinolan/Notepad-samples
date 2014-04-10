@@ -1,0 +1,278 @@
+html{
+	font-family:	Segoe WP light;
+}
+body{
+	margin:	0;
+}
+#selector{
+	position:	fixed;
+	background-color:	#1C1C1C;
+	height:	100%;
+	width:	300px;
+	border-right-color:	#424242;
+	border-right-width:	15px;
+	border-right-style:	solid;
+	z-index:	1;
+	color:	#33CCFF;
+}
+.behind{
+	position:	absolute;
+	right:	20px;
+	top:	25px;
+	font-size:	35px;
+}
+.screens{
+	position:	absolute;
+	right:	20px;
+	top:	60px;
+	font-size:	35px;
+}
+.best1{
+	right:	20px;
+	color:	White;
+	position:	absolute;
+	top:	150px;
+	font-size:	20px;
+}
+.best1:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+.best2{
+	right:	20px;
+	color:	White;
+	position:	absolute;
+	top:	190px;
+	font-size:	20px;
+}
+.best2:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+.best3{
+	right:	20px;
+	color:	White;
+	position:	absolute;
+	top:	230px;
+	font-size:	20px;
+}
+.best3:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+.best4{
+	right:	20px;
+	color:	White;
+	position:	absolute;
+	top:	270px;
+	font-size:	20px;
+}
+.best4:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+
+
+.homelogo{
+	position:	absolute;
+	bottom: 50px;
+	left:	30px;
+	height:	50px;
+	width:	50px;
+}
+.homeword{
+	position:	absolute;
+	bottom:	45px;
+	left:	85px;
+	color:	#33CCFF;
+}
+.homeword:hover{
+	color: White;
+}
+
+
+
+
+#right{
+	position:	absolute;
+	right:	0px;
+	height:	100%;
+	width:	70%;
+	text-align:	left;
+	padding-right:	20px;
+}
+.prog1{
+	position:	relative;
+	left:	100px;
+	
+}
+.prog1desc{
+	position: relative;
+	left:	160px;
+	font-size:	25px;
+	margin-bottom:	80px;
+}
+.prog2{
+	position:	relative;
+	left:	160px;
+	
+}
+.prog2desc{
+	position: relative;
+	left:	160px;
+	font-size:	25px;
+	margin-bottom:	80px;
+}
+.prog3{
+	position:	relative;
+	left:	130px;
+	
+}
+.prog3desc{
+	position: relative;
+	left:	160px;
+	font-size:	25px;
+	margin-bottom:	100px;
+}
+.bored1{
+	position:	relative;
+	left:	170px;
+	
+}
+.bored1desc{
+	position: relative;
+	left:	160px;
+	font-size:	25px;
+	margin-bottom:	80px;
+}
+.bored2{
+	position:	relative;
+	left:	120px;
+	
+}
+.bored2desc{
+	position: relative;
+	left:	250px;
+	font-size:	25px;
+	margin-bottom:	80px;
+}
+.bored3{
+	position:	relative;
+	left:	120px;
+	
+}
+.bored3desc{
+	position: relative;
+	left:	180px;
+	font-size:	25px;
+	margin-bottom:	80px;
+}
+.bored4{
+	position:	relative;
+	left:	210px;
+	
+}
+.bored4desc{
+	position: relative;
+	left:	150px;
+	font-size:	25px;
+	margin-bottom:	100px;
+}
+
+.late1{
+	position:	relative;
+	left:	210px;
+	margin-bottom:	80px;
+}
+
+.late2{
+	position:	relative;
+	left:	150px;
+	margin-bottom:	80px;
+}
+.late3{
+	position:	relative;
+	left:	150px;
+	margin-bottom:	80px;
+}
+.late4{
+	position:	relative;
+	left:	150px;
+	margin-bottom:	15px;
+}
+.latenightdesc{
+	position: relative;
+	left:	110px;
+	font-size:	25px;
+	margin-bottom:	100px;
+}
+
+.random1{
+	position:	relative;
+	left:	150px;
+	margin-bottom:	80px;
+}
+.random2{
+	position:	relative;
+	left:	150px;
+	margin-bottom:	80px;
+}
+.random3{
+	position:	relative;
+	left:	150px;
+	margin-bottom:	80px;
+}
+.random4{
+	position:	relative;
+	left:	150px;
+	margin-bottom:	80px;
+}
+.random5{
+	position:	relative;
+	left:	150px;
+	margin-bottom:	80px;
+}
+.random6{
+	position:	relative;
+	left:	220px;
+	margin-bottom:	80px;
+}
+.random7{
+	position:	relative;
+	left:	150px;
+	margin-bottom:	80px;
+}
+.random8{
+	position:	relative;
+	left:	220px;
+	margin-bottom:	80px;
+}
+.random9{
+	position:	relative;
+	left:	40px;
+	margin-bottom:	80px;
+}
+.random10{
+	position:	relative;
+	left:	40px;
+	margin-bottom:	80px;
+}
+.random11{
+	position:	relative;
+	left:	40px;
+	margin-bottom:	80px;
+}
+.randomdesc{
+	position: relative;
+	left:	10px;
+	font-size:	20px;
+	margin-bottom:	80px;
+}
+
+.thanks{
+	position: relative;
+	left:	60px;
+	font-size:	30px;
+	margin-bottom:	100px;
+	color:	#ff6633;
+}

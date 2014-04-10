@@ -1,0 +1,379 @@
+html{
+	font-family:	Segoe WP light;
+}
+body{
+	margin:	0;
+}
+#selector{
+	position:	fixed;
+	background-color:	#1C1C1C;
+	height:	100%;
+	width:	300px;
+	border-right-color:	#424242;
+	border-right-width:	15px;
+	border-right-style:	solid;
+	z-index:	1;
+	color:	#33CCFF;
+}
+.sap2program{
+	position:	absolute;
+	right:	20px;
+	top:	25px;
+	font-size:	30px;
+}
+.meet0{
+	right:	20px;
+	color:	White;
+	position:	absolute;
+	top:	90px;
+	font-size:	15px;
+}
+.meet0:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+.meet1{
+	right:	20px;
+	color:	White;
+	position:	absolute;
+	top:	120px;
+	font-size:	15px;
+}
+.meet1:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+.meet2{
+	right:	20px;
+	color:	White;
+	position:	absolute;
+	top:	150px;
+	font-size:	15px;
+}
+.meet2:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+.menu1{
+	right:	20px;
+	color:	#CCCCCC;
+	font-size:	13px;
+	position:	absolute;
+	top:	175px;
+}
+.menu1:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+.menu2{
+	right:	20px;
+	color:	#CCCCCC;
+	font-size:	13px;
+	position:	absolute;
+	top:	200px;
+}
+.menu2:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+.menu3{
+	right:	20px;
+	color:	#CCCCCC;
+	font-size:	13px;
+	position:	absolute;
+	top:	225px;
+}
+.menu3:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+.menu4{
+	right:	20px;
+	color:	#CCCCCC;
+	font-size:	13px;
+	position:	absolute;
+	top:	250px;
+}
+.menu4:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+.menu5{
+	right:	20px;
+	color:	#CCCCCC;
+	font-size:	13px;
+	position:	absolute;
+	top:	275px;
+}
+.menu5:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+.menu6{
+	right:	20px;
+	color:	#CCCCCC;
+	font-size:	13px;
+	position:	absolute;
+	top:	300px;
+}
+.menu6:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+
+
+.homelogo{
+	position:	absolute;
+	bottom: 30px;
+	left:	30px;
+	height:	50px;
+	width:	50px;
+}
+.homeword{
+	position:	absolute;
+	bottom:	25px;
+	left:	85px;
+	color:	#33CCFF;
+}
+.homeword:hover{
+	color: White;
+}
+
+
+.meet3{
+	right:	20px;
+	color:	White;
+	position:	absolute;
+	top:	320px;
+	font-size:	20px;
+}
+.meet3:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+
+.menu7{
+	right:	20px;
+	color:	#CCCCCC;
+	font-size:	13px;
+	position:	absolute;
+	top:	355px;
+}
+.menu7:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+.menu8{
+	right:	20px;
+	color:	#CCCCCC;
+	font-size:	13px;
+	position:	absolute;
+	top:	380px;
+}
+.menu8:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+
+.meet4{
+	right:	20px;
+	color:	White;
+	position:	absolute;
+	top:	395px;
+	font-size:	20px;
+}
+.meet4:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+
+.menu9{
+	right:	20px;
+	color:	#CCCCCC;
+	font-size:	13px;
+	position:	absolute;
+	top:	430px;
+}
+.menu9:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+
+.menu10{
+	right:	20px;
+	color:	#CCCCCC;
+	font-size:	13px;
+	position:	absolute;
+	top:	455px;
+}
+.menu10:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+.menu11{
+	right:	20px;
+	color:	#CCCCCC;
+	font-size:	13px;
+	position:	absolute;
+	top:	480px;
+}
+.menu11:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+.menu12{
+	right:	20px;
+	color:	#CCCCCC;
+	font-size:	13px;
+	position:	absolute;
+	top:	505px;
+}
+.menu12:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+.menu13{
+	right:	20px;
+	color:	#CCCCCC;
+	font-size:	13px;
+	position:	absolute;
+	top:	530px;
+}
+.menu13:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+
+.meet5{
+	right:	20px;
+	color:	White;
+	position:	absolute;
+	top:	390px;
+	font-size:	15px;
+}
+.meet5:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+.meet6{
+	right:	20px;
+	color:	White;
+	position:	absolute;
+	top:	420px;
+	font-size:	15px;
+}
+.meet6:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+.meet7{
+	right:	20px;
+	color:	White;
+	position:	absolute;
+	top:	450px;
+	font-size:	15px;
+}
+.meet7:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+.meet8{
+	right:	20px;
+	color:	White;
+	position:	absolute;
+	top:	480px;
+	font-size:	15px;
+}
+.meet8:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+.meet9{
+	right:	20px;
+	color:	White;
+	position:	absolute;
+	top:	510px;
+	font-size:	15px;
+}
+.meet9:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+.meet10{
+	right:	20px;
+	color:	White;
+	position:	absolute;
+	top:	540px;
+	font-size:	15px;
+}
+.meet10:hover{
+	cursor:	pointer;
+	text-decoration: underline;
+}
+#right{
+	position:	absolute;
+	right:	0px;
+	height:	100%;
+	width:	70%;
+	text-align:	left;
+	padding-right:	20px;
+}
+.logo{
+	position:	relative;
+	left:  100 px;
+}
+.logoabout{
+	position:	absolute;
+	right:	70px;
+	top:	80px;
+	font-size:	18px;
+	
+}
+.loading{
+	position:	relative;
+	left: 100px;
+}
+.menu{
+	position: relative;
+	height:		475px;
+	width:	800px;
+	left:	80px;
+}
+.mainprog{
+	position: relative;
+	left:	-230px;
+}
+.numbering{
+	color:	#33CCFF;
+	position:	relative;
+	left:	20px;
+	top:	-20px;
+}
+.desc1{
+	position:	relative;
+	left:	40px;
+	font-size:	20px;
+	margin-bottom:	60px;
+	top:	-30px;
+}
+.runmode{
+	position: relative;
+	left:	-210px;
+	top:	-25px;
+}
+.exwind{
+	position: relative;
+	left:	-50px;
+	top:	-25px;
+}
+.exam{
+	display:	block;
+	margin-top:	20px;
+	position:	relative;
+	left: 150px;
+}
+.trace{
+	display:	block;
+	position: relative;
+	left:	-20px;
+}
